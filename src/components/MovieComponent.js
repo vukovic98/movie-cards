@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Button, Card, Image } from 'react-bootstrap';
+import { Badge, Button, Card, Image } from 'react-bootstrap';
 import StarRatings from 'react-star-ratings';
 
 export default function MovieComponent({data, update}) {
@@ -19,17 +19,17 @@ export default function MovieComponent({data, update}) {
     console.log(movie);
 
     return(
-        <div style={{'height':'500px'}} className="col-md-3 float-left mt-3">
-            <Card>
+        <div style={{'height':'500px'}} className="col-md-3 float-left mt-5 mb-5">
+            <Card style={{'height':'572px'}} className="mt-5 mb-5">
                 <Card.Header>
-                <img className="card-img-top" style={{'height': '100px'}} src={movie.imageUrl} alt="" />
+                <img className="card-img-top" style={{'height': '150px'}} src={movie.imageUrl} alt="" />
                     <h3>{data.title}</h3>
                 </Card.Header>
                 <Card.Body>
                     <b>Subtitle:</b> {movie.subtitle} <br/>
                     <b>Year:</b> {movie.year} <br/>
                     <b>Description:</b> {movie.description} <br/>
-                    <b>Rate:</b> {movie.rating.toFixed(2)} <br/>
+                    <b>Rate:</b> <Badge variant="danger">{movie.rating.toFixed(2)}</Badge> <br/>
                 </Card.Body>
 
                 <Card.Footer>

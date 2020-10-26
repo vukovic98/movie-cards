@@ -56,6 +56,7 @@ export default function AddMovie({movies, update}) {
                             <Form.Group as={Col}>
                                 <Form.Control 
                                     type="text"
+                                    required
                                     placeholder="Insert Movie Subtitle"
                                     name="movie[subtitle]"
                                     value={movie.subtitle}
@@ -66,6 +67,7 @@ export default function AddMovie({movies, update}) {
                             <Form.Group as={Col}>
                                 <Form.Control 
                                     type="text"
+                                    required
                                     placeholder="Insert Movie Description"
                                     name="movie[description]"
                                     value={movie.description}
@@ -89,6 +91,7 @@ export default function AddMovie({movies, update}) {
                             <Form.Group as={Col}>
                                 <Form.Control 
                                     type="text"
+                                    required
                                     placeholder="Insert Movie Image Url"
                                     name="movie[imageUrl]"
                                     value={movie.imageUrl}
